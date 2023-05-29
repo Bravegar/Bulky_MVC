@@ -3,6 +3,7 @@ using BulkyWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BulkyWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230529075847_SeedCategoryTable")]
+    partial class SeedCategoryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,36 +86,6 @@ namespace BulkyWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Drinks");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CaloriesPerServing = 230,
-                            Description = "This is very yummy!",
-                            Name = "Coca Cola"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CaloriesPerServing = 240,
-                            Description = "This is very yummy!",
-                            Name = "Fanta"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CaloriesPerServing = 250,
-                            Description = "This is very yummy!",
-                            Name = "Pepsi"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CaloriesPerServing = 260,
-                            Description = "This is very yummy!",
-                            Name = "Sprite"
-                        });
                 });
 #pragma warning restore 612, 618
         }
