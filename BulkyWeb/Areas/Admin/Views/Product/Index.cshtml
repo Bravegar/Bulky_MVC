@@ -30,6 +30,8 @@
                     <th>
                         Description
                     </th>
+                    <th>Price</th>
+                    <th>Category</th>
                 </tr>
             </thead>
 
@@ -41,6 +43,8 @@
                         <td>
                             @obj.Description
                         </td>
+                        <td>@obj.Price</td>
+                        <td></td>
                         <td>
                             <div class="w-75 btn-group" role="group">
                                 <a asp-area="Admin" asp-controller="Product" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
