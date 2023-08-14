@@ -117,6 +117,19 @@ namespace Bulky.DataAccess.Data
                     ImageUrl = ""
                 }
                 );
+            modelBuilder.Entity<Company>().HasData(
+                new Company
+                {
+                    Id = 1,
+                    Name = "BookCompany",
+                    StreetAddress = "Book Street",
+                    City = "Book City",
+                    State = "Book State",
+                    PostalCode = "123456",
+                    PhoneNumber = "2123334444",
+
+
+                });
         }
         
         
